@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/dije1636/public_html/imadloftbarber/
+    - export DEPLOYPATH=/home/dije1636/imadloftbarber/
     - /bin/cp package.json $DEPLOYPATH
     - /bin/cp server.js $DEPLOYPATH
     - /bin/cp Passengerfile.json $DEPLOYPATH

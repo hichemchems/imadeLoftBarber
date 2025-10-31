@@ -39,10 +39,15 @@ app.get('/api/test-db', (req, res) => {
   });
 });
 
-// Start the server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// For Passenger, don't call listen() - Passenger handles this
+if (typeof(PhusionPassenger) !== 'undefined') {
+  app.listen('passenger');
+} else {
+  // For local development
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
 
 module.exports = app;
