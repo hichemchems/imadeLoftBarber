@@ -2,10 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/dije1636/imadloftbarber/
-    - /bin/cp package.json $DEPLOYPATH
-    - /bin/cp server.js $DEPLOYPATH
-    - /bin/cp Passengerfile.json $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/cp -r public $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH/
     - /bin/mkdir -p $DEPLOYPATH/log $DEPLOYPATH/tmp/pids
     - cd $DEPLOYPATH && /usr/local/cpanel/3rdparty/bin/npm install --production
