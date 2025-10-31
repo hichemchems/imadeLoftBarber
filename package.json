@@ -1,0 +1,15 @@
+{
+  "name": "imadloftbarber-template",
+  "version": "1.0.0",
+  "description": "Minimal Node.js app template for o2switch deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'No build step required for this minimal app'",
+    "predeploy": "npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}

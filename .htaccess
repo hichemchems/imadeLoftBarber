@@ -1,0 +1,22 @@
+# Enable Passenger
+PassengerEnabled On
+PassengerAppType node
+PassengerStartupFile server.js
+PassengerAppEnv production
+
+# Set environment variables for database connection
+SetEnv DB_HOST localhost
+SetEnv DB_NAME dije1636_loft-barbe-db
+SetEnv DB_USER dije1636_imad-coiffeur
+SetEnv DB_PASSWORD password@password.password
+SetEnv DB_PORT 3306
+SetEnv NODE_ENV production
+SetEnv JWT_SECRET ber-jwt-secret-production-2024-secure-key-change-this
+SetEnv JWT_EXPIRE 10d
+SetEnv BCRYPT_ROUNDS 12
+
+# SPA routing - redirect all requests to index.html for client-side routing
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

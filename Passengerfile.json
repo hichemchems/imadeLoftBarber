@@ -1,0 +1,11 @@
+{
+  "app_type": "node",
+  "startup_file": "server.js",
+  "port": 3000,
+  "environment": "production",
+  "log_file": "log/passenger.log",
+  "pid_file": "tmp/pids/passenger.pid",
+  "temp_dir": "tmp",
+  "user": "dij1636",
+  "group": "dij1636"
+}
