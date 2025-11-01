@@ -3,6 +3,7 @@ PassengerEnabled On
 PassengerAppType node
 PassengerStartupFile server.js
 PassengerAppEnv production
+PassengerPython /usr/bin/python3
 
 # Set environment variables for database connection
 SetEnv DB_HOST localhost

@@ -39,8 +39,12 @@ app.get('/api/test-db', (req, res) => {
   });
 });
 
+// Export the app for Passenger
+module.exports = app;
+
 // For Passenger, don't call listen() - Passenger handles this
 if (typeof(PhusionPassenger) !== 'undefined') {
+  PhusionPassenger.configure({ autoInstall: false });
   app.listen('passenger');
 } else {
   // For local development
@@ -49,5 +53,3 @@ if (typeof(PhusionPassenger) !== 'undefined') {
     console.log(`Server running on port ${port}`);
   });
 }
-
-module.exports = app;
