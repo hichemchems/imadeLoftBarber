@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/dije1636/gestionBarber/deploy/
+    - export DEPLOYPATH=/home/dije1636/imadloftbarber/
     - /bin/cp -r * $DEPLOYPATH/
     - /bin/mkdir -p $DEPLOYPATH/log $DEPLOYPATH/tmp/pids
     - cd $DEPLOYPATH && /usr/local/cpanel/3rdparty/bin/npm install --production
